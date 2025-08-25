@@ -32,7 +32,7 @@ import { heicTo, isHeic } from 'heic-to'
 export default function MultipleFileUpload() {
   const [alistStorage, setAlistStorage] = useState([])
   const [storageSelect, setStorageSelect] = useState(false)
-  const [storage, setStorage] = useState('r2')
+  const [storage, setStorage] = useState('s3')
   const [album, setAlbum] = useState('')
   const [alistMountPath, setAlistMountPath] = useState('')
   const [lat, setLat] = useState('')
@@ -71,7 +71,7 @@ export default function MultipleFileUpload() {
 
   const storages = [
     {
-      label: 'S3 API',
+      label: t('tanmt.oss'),
       value: 's3',
     },
     {

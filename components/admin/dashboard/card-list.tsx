@@ -134,7 +134,7 @@ export default function CardList(props: Readonly<AnalysisDataProps>) {
             </Table>
           </CardContent>
         </Card>
-        <Card className="min-h-80 w-full border">
+        {/* <Card className="min-h-80 w-full border">
           <CardHeader>
             <CardTitle>{t('Dashboard.how')}</CardTitle>
           </CardHeader>
@@ -164,7 +164,7 @@ export default function CardList(props: Readonly<AnalysisDataProps>) {
               </Button>
             </Link>
           </CardContent>
-        </Card>
+        </Card> */}
       </div>
       <Table>
         <TableHeader>

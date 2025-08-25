@@ -1,4 +1,9 @@
 {
+  "tanmt": {
+    "oss": "aliyun oss",
+    "dragImage": "Drag and drop image here",
+    "clickBrowse": "Or click to browse (max 1 file)"
+  },
   "Words": {
     "album": "Album",
     "storage": "Storage",

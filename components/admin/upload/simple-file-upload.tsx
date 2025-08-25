@@ -37,7 +37,7 @@ import { heicTo, isHeic } from 'heic-to'
 export default function SimpleFileUpload() {
   const [alistStorage, setAlistStorage] = useState([])
   const [storageSelect, setStorageSelect] = useState(false)
-  const [storage, setStorage] = useState('r2')
+  const [storage, setStorage] = useState('s3')
   const [album, setAlbum] = useState('')
   const [alistMountPath, setAlistMountPath] = useState('')
   const [exif, setExif] = useState({} as ExifType)
@@ -176,7 +176,7 @@ export default function SimpleFileUpload() {
 
   const storages = [
     {
-      label: 'S3 API',
+      label: t('tanmt.oss'),
       value: 's3',
     },
     {
@@ -423,9 +423,9 @@ export default function SimpleFileUpload() {
           <FileUploadDropzone className="h-full">
             <div className="flex flex-col items-center gap-1">
               <UploadIcon/>
-              <p className="font-medium text-sm">Drag & drop image here</p>
+              <p className="font-medium text-sm">{t('tanmt.dragImage')}</p>
               <p className="text-muted-foreground text-xs">
-                Or click to browse (max 1 files)
+                {t('tanmt.clickBrowse')}
               </p>
             </div>
           </FileUploadDropzone>

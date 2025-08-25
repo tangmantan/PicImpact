@@ -1,4 +1,9 @@
 {
+  "tanmt": {
+    "oss": "阿里云oss",
+    "dragImage": "拖拽图片到这里",
+    "clickBrowse": "或单击浏览（最多1个文件）"
+  },
   "Words": {
     "album": "相簿",
     "storage": "儲存",
