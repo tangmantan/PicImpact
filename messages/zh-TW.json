@@ -2,7 +2,9 @@
   "tanmt": {
     "oss": "阿里云oss",
     "dragImage": "拖拽图片到这里",
-    "clickBrowse": "或单击浏览（最多1个文件）"
+    "clickBrowse": "或单击浏览（最多1个文件）",
+    "uploadJPGorHEIC":"请上传 JPG（或 HEIC）",
+    "uploadMovFile":"请上传 MOV 文件"
   },
   "Words": {
     "album": "相簿",

@@ -466,7 +466,7 @@ export default function LivephotoFileUpload() {
             <FileUploadDropzone className="h-full">
               <div className="flex flex-col items-center gap-1">
                 <UploadIcon/>
-                <p className="font-medium text-sm">{t('tanmt.dragImage')}</p>
+                <p className="font-medium text-sm">{t('tanmt.uploadJPGorHEIC')}，{t('tanmt.dragImage')}</p>
                 <p className="text-muted-foreground text-xs">
                   {t('tanmt.clickBrowse')}
                 </p>
@@ -498,7 +498,7 @@ export default function LivephotoFileUpload() {
             <FileUploadDropzone className="h-full">
               <div className="flex flex-col items-center gap-1">
                 <UploadIcon/>
-                <p className="font-medium text-sm">{t('tanmt.dragImage')}</p>
+                <p className="font-medium text-sm">{t('tanmt.uploadMovFile')}，{t('tanmt.dragImage')}</p>
                 <p className="text-muted-foreground text-xs">
                   {t('tanmt.clickBrowse')}
                 </p>

@@ -2,7 +2,9 @@
   "tanmt": {
     "oss": "アリヤンオスス",
     "dragImage": "画像をドラッグアンドドロップ",
-    "clickBrowse": "またはクリックして参照（最大1ファイル）"
+    "clickBrowse": "またはクリックして参照（最大1ファイル）",
+    "uploadJPGorHEIC":"JPG（またはHEIC）をアップロードしてください",
+    "uploadMovFile":"MOVファイルをアップロードしてください"
   },
   "Words": {
     "album": "アルバム",

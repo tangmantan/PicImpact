@@ -2,7 +2,9 @@
   "tanmt": {
     "oss": "aliyun oss",
     "dragImage": "Drag and drop image here",
-    "clickBrowse": "Or click to browse (max 1 file)"
+    "clickBrowse": "Or click to browse (max 1 file)",
+    "uploadJPGorHEIC":"Please upload JPG (or HEIC)",
+    "uploadMovFile":"Please upload MOV file"
   },
   "Words": {
     "album": "Album",
