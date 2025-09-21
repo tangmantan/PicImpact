@@ -31,6 +31,7 @@ import { Button } from '~/components/ui/button'
 import { X } from 'lucide-react'
 import { UploadIcon } from '~/components/icons/upload'
 import { heicTo, isHeic } from 'heic-to'
+import { encodeBrowserThumbHash } from '~/lib/utils/blurhash-client'
 
 export default function LivephotoFileUpload() {
   const [alistStorage, setAlistStorage] = useState([])
@@ -48,6 +49,7 @@ export default function LivephotoFileUpload() {
   const [height, setHeight] = useState(0)
   const [lat, setLat] = useState('')
   const [lon, setLon] = useState('')
+  const [hash, setHash] = useState('')
   const [detail, setDetail] = useState('')
   const [imageLabels, setImageLabels] = useState([] as string[])
   const [activeTagIndex, setActiveTagIndex] = useState<number | null>(null)
@@ -85,8 +87,9 @@ export default function LivephotoFileUpload() {
           setWidth(Number(img.width))
           setHeight(Number(img.height))
         }
-        // @ts-ignore
-        img.src = e.target.result
+        if (e.target && typeof e.target.result === 'string') {
+          img.src = e.target.result
+        }
       }
       reader.readAsDataURL(file)
     } catch (e) {
@@ -118,6 +121,7 @@ export default function LivephotoFileUpload() {
         url: url,
         title: title,
         preview_url: previewUrl,
+        blurhash: hash,
         video_url: videoUrl,
         exif: exif,
         labels: imageLabels,
@@ -133,7 +137,6 @@ export default function LivephotoFileUpload() {
           'Content-Type': 'application/json',
         },
         method: 'post',
-        // @ts-ignore
         body: JSON.stringify(data),
       }).then(res => res.json())
       if (res?.code === 200) {
@@ -223,6 +226,7 @@ export default function LivephotoFileUpload() {
           throw new Error('Upload failed')
         }
         await loadExif(file)
+        setHash(await encodeBrowserThumbHash(file))
         setUrl(res?.data?.url)
       } else {
         throw new Error('Upload failed')
@@ -267,6 +271,7 @@ export default function LivephotoFileUpload() {
     setStorageSelect(false)
     setAlistMountPath('')
     setExif({} as ExifType)
+    setHash('')
     setUrl('')
     setTitle('')
     setDetail('')
